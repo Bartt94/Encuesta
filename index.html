@@ -2,40 +2,320 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="Nombre del cliente">
+    <title>Hostería-Las-Quintas</title>
     
-    <title>Milleniumcargo</title>
-    
-
-    <!-- Bootstrap core CSS -->    
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-
-
-
     <!-- Custom styles for this template -->
     <link href="css/layout.css" rel="stylesheet">
     <link href="css/format.css" rel="stylesheet">
-    <link href="css/menu.css" rel="stylesheet">
-    <link href="css/form.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    
     
     
     <!-- Extra styles for plugins -->
+    <link href="css/animate.css" rel="stylesheet">
   
         
 </head>
   
 <body>
 
+    <div id="footer" class="row">
+        <div class=" col-md-3  text-center">
+            <img src="images/logo-Bart-250.png" class="img-fluid logo">
+        </div>
+        <div class="col-12 col-md-9 text-center title">
+            <h1>RESTAURANT BART</h1>
+        </div>
+    </div>
+
+    <div id="Contenedor1">
+        <div class="container">
+            <div id="containerCentro" class="row">
+                <div class="registro col-11 col-sm-12 col-md-5 col-lg-3 wow animated fadeInLeft" data-wow-delay="200ms">
+                    <form id="formulario">
+                        <div class="form-group">
+                            <input type="text" name="Nombre"  class="input-block " placeholder="Nombre:" id="Nombre">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="Télefono" class="input-block " placeholder="Télefono:" id="Telefono">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="Fecha" class="input-block " placeholder="Fecha:" id="Fecha">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="E-mail" class="input-block " placeholder="E-mail:" id="E-mail">
+                        </div>
+                        <div class="form-group">
+                            <input type="button" value="Enviar" onclick="enviar_datos();" class="btn btn-secondary form-control">
+                        </div>
+                    </form>
+                        <div class="form-group">
+                        <ol>
+                            <li>Malo</li>
+                            <li>Regular</li>
+                            <li>Bueno</li>
+                            <li>Exelente</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class=" preguntas col-sm-12 col-md-7 col-lg-9">
+                    <div  class=" containerPregunta text-center" style="display:block">
+                        <tr>
+                          <td>
+                            <label name="preguntas" class="padding">1.-¿Cómo se entero de nuestro restaurante?</label>
+                          </td>
+                          <br>
+                            <td>
+                               
+                                    <input type="radio" name="radio"    id="radio" value="Tv">
+                                    <label class="i"> Tv </label>
+                                
+                                
+                                    <input type="radio" name="radio"  id="radio"  value="Radio">
+                                    <label class="i"> Radio </label>
+                                
+                                
+                                    <input type="radio" name="radio" id="radio" value="Internet">
+                                    <label class="i"> Internet </label>
+                                
+                                
+                                    <input type="radio" name="radio" id="radio" value="Recomendación">
+                                    <label class="i"> Recomendación </label>
+                                
+                                    <input type="radio" name="radio" id="radio" value="Otro">
+                                    <label class="i"> Otro </label>
+                                
+                            </td>
+                        </tr>
+                    </div>
+                    <div  class=" containerPregunta text-center" style="display:none"> 
+                        <tr>
+                      <td>
+                        <label name="preguntas" class="padding">2.-La calidad del servicio de su mesero fue</label>
+                      </td>
+                      <br>
+                        <td>
+                           
+                                <input type="radio" id="radio" value="Malo">
+                                <label class="i"> 1 </label>
+                            
+                            
+                                <input type="radio" id="radio"  value="Regular">
+                                <label class="i"> 2 </label>
+                            
+                            
+                                <input type="radio" id="radio" value="Bueno">
+                                <label class="i"> 3 </label>
+                            
+                            
+                                <input type="radio" id="radio" value="Exelente">
+                                <label class="i"> 4 </label>
+                            
+                        </td>
+                        </tr>
+                    </div>
+                    <div  class=" containerPregunta text-center" style="display:none">
+                        <tr>
+                      <td>
+                        <label name="preguntas" class="padding">3.- Tiempo en el que fueron servidos sus alimentos</label>
+                      </td>
+                      <br>
+                        <td>
+                            
+                                <input type="radio" name="radio[]"    id="radio" value="">
+                                <label class="i"> 1 </label>
+                            
+                          
+                                <input type="radio" name="radio[]"  id="radio"  value="">
+                                <label class="i"> 2 </label>
+                            
+                                <input type="radio" name="radio[]" id="radio" value="">
+                                <label class="i"> 3 </label>
+                            
+                                <input type="radio" name="radio[]" id="radio" value="">
+                                <label class="i"> 4 </label>
+                           
+                        </td>
+                        </tr>
+                    </div>
+                    <div  class=" containerPregunta text-center" style="display:none">
+                        <tr>
+                      <td>
+                        <label name="preguntas" class="padding">4.- La calidad de nuestros alimentos</label>
+                      </td>
+                      <br>
+                        <td>
+                            
+                                <input type="radio" name="radio[]"    id="radio" value="">
+                                <label class="i"> 1 </label>
+                            
+                                <input type="radio" name="radio[]"  id="radio"  value="">
+                                <label class="i"> 2 </label>
+                            
+                                <input type="radio" name="radio[]" id="radio" value="">
+                                <label class="i"> 3 </label>
+                            
+                                <input type="radio" name="radio[]" id="radio" value="">
+                                <label class="i"> 4 </label>
+                            
+                        </td>
+                        </tr>
+                    </div>
+                    <div  class=" containerPregunta text-center" style="display:none">
+                        <tr>
+                      <td>
+                        <label name="preguntas" class="padding">5.- Ambiente del restaurante</label>
+                      </td>
+                      <br>
+                        <td>
+                            
+                                <input type="radio" name="radio[]"    id="radio" value="">
+                                <label class="i"> 1 </label>
+                            
+                                <input type="radio" name="radio[]"  id="radio"  value="">
+                                <label class="i"> 2 </label>
+                          
+                                <input type="radio" name="radio[]" id="radio" value="">
+                                <label class="i"> 3 </label>
+                            
+                                <input type="radio" name="radio[]" id="radio" value="">
+                                <label class="i"> 4 </label>
+                           
+                        </td>
+                        </tr>
+                    </div>
+                    <div  class=" containerPregunta text-center" style="display:none">
+                        <tr>
+                      <td>
+                        <label name="preguntas" class="padding">6.- Limpieza de las instalaciones</label>
+                      </td>
+                      <br>
+                        <td>
+                           
+                                <input type="radio" name="radio[]"    id="radio" value="">
+                                <label class="i"> 1 </label>
+                            
+                                <input type="radio" name="radio[]"  id="radio"  value="">
+                                <label class="i"> 2 </label>
+                            
+                                <input type="radio" name="radio[]" id="radio" value="">
+                                <label class="i"> 3 </label>
+                            
+                                <input type="radio" name="radio[]" id="radio" value="">
+                                <label class="i"> 4 </label>
+                           
+                        </td>
+                        </tr>
+                    </div>
+                    <div  class=" containerPregunta text-center" style="display:none">
+                        <tr>
+                      <td>
+                        <label name="preguntas" class="padding">7.- Variedad de la música </label>
+                      </td>
+                      <br>
+                        <td>
+                            
+                                <input type="radio" name="radio[]"    id="radio" value="">
+                                <label class="i"> 1 </label>
+                            
+                                <input type="radio" name="radio[]"  id="radio"  value="">
+                                <label class="i"> 2 </label>
+                            
+                                <input type="radio" name="radio[]" id="radio" value="">
+                                <label class="i"> 3 </label>
+                            
+                                <input type="radio" name="radio[]" id="radio" value="">
+                                <label class="i"> 4 </label>
+                            </li>
+                        </td>
+                        </tr>
+                    </div>
+                    <div  class=" containerPregunta text-center" style="display:none">
+                        <tr>
+                      <td>
+                        <label name="preguntas" class="padding">8.- Volumen de la música  </label>
+                      </td>
+                      <br>
+                        <td>
+                            
+                                <input type="radio" name="radio[]"    id="radio" value="">
+                                <label class="i"> 1 </label>
+                            
+                                <input type="radio" name="radio[]"  id="radio"  value="">
+                                <label class="i"> 2 </label>
+                           
+                                <input type="radio" name="radio[]" id="radio" value="">
+                                <label class="i"> 3 </label>
+                           
+                                <input type="radio" name="radio[]" id="radio" value="">
+                                <label class="i"> 4 </label>
+                            
+                        </td>
+                        </tr>
+                    </div>
+                    <div  class=" containerPregunta text-center" style="display:none">
+                        <tr>
+                      <td>
+                        <label name="preguntas" class="padding">9.- Valor  por lo pagado   </label>
+                      </td>
+                      <br>
+                        <td>
+                           
+                                <input type="radio" name="radio[]"    id="radio" value="">
+                                <label class="i"> 1 </label>
+                            
+                                <input type="radio" name="radio[]"  id="radio"  value="">
+                                <label class="i"> 2 </label>
+                            
+                                <input type="radio" name="radio[]" id="radio" value="">
+                                <label class="i"> 3 </label>
+                            
+                                <input type="radio" name="radio[]" id="radio" value="">
+                                <label class="i"> 4 </label>
+                            
+                        </td>
+                        </tr>
+                    </div>
+                    <div data-fin="terminado" class=" containerPregunta text-center" style="display:none">
+                        <tr>
+                      <td>
+                        <label name="preguntas" class="padding">10.- Nos recomendaría ?  </label>
+                      </td>
+                      <br>
+                        <td>
+                            
+                                <input type="radio" name="radio[]"    id="radio" value="">
+                                <label class="i"> Si </label>
+                            
+                                <input type="radio" name="radio[]"  id="radio"  value="">
+                                <label class="i"> No </label>
+                            
+                        </td>
+                        </tr>
+                    </div>
+                </div><!-- /Contenedor de preguntas -->
+                    <!--<textarea name="comentario" placeholder="Escribe tu comentario"></textarea>-->
+            </div><!-- /Row -->
+        </div><!-- /container -->
+    </div><!-- /Contenedor1 -->
+
 
 
 
     <!-- Bootstrap core JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+	
     
     <!-- JS Fonts -->    
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Aladin|Coiny" rel="stylesheet"> 
 	<script src="https://use.fontawesome.com/9f4d4da45d.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     
 	<!-- Extra JS -->
+    <script src="js/theme.js" type="text/javascript"></script>
+    <script src="js/wow.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/aciones.js"></script>
+
 </body>
 </html>

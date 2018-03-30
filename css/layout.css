@@ -1,2 +1,17 @@
 /* CSS Document */
+body{
+	background-image: url(../images/fondo.png);
+	width: 100%;
+	height: auto;
+	padding-right: 0;
+	
+}
+#containerCentro{
+height: 600px;
+/*background: green;*/
+}
 
+#Contenedor1{
+	position: relative;
+	top: 80px;
+}
